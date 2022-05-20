@@ -8,7 +8,7 @@ allbg = filter tfplan.resource_changes as _, rc {
 emails = 0 
 for allbg as _,bg{
   print(bg["change"]["after"]["notification"][0]["subscriber_email_addresses"])
-  emails = length(bg["change"]["notification"][0]["subscriber_email_addresses"])
+  emails = length(bg["change"]["after"]["notification"][0]["subscriber_email_addresses"])
 }
 
 main=rule{
